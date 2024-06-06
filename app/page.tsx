@@ -2,20 +2,7 @@ import { Navigation, Footer, PageTemplate } from "@/components";
 import { client } from "@/sanity/lib/client";
 import { SanityDocument } from "next-sanity";
 import { HOMEPAGE_QUERY } from "@/sanity/lib/queries";
-
-// const PAGE_QUERY = `*[
-//     _type == "page" &&
-//     slug.current == "home"
-//   ][0]{
-//   ...,
-//   navigation->{
-//     ...,
-//     "includeLogo": includeLogo,
-//     "links": links[]->},
-//   footer->{
-//     ...,
-//   }
-// }`;
+import MainHeader from "@/components/Header/MainHeader";
 
 export default async function Home() {
   const page = await client.fetch<Page>(HOMEPAGE_QUERY);
@@ -24,7 +11,8 @@ export default async function Home() {
 
   return (
     <>
-      {page?.navigation && <Navigation data={page.navigation} />}
+      {/* {page?.navigation && <Navigation data={page.navigation} />} */}
+      <MainHeader navigation={page.navigation} />
       {page?.title && <PageTemplate page={page} />}
       {/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
         Populate me with Sanity Content

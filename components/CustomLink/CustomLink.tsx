@@ -1,9 +1,14 @@
-import { pageInfo } from "@/utils/constants";
-import { SanityDocument } from "next-sanity";
+import { cn } from "@/utils/cn";
 import Link from "next/link";
+import { CustomLinkProps } from "./types";
 
-const CustomLink = ({ data }: { data: SanityDocument }) => {
-  const linkStyle = "text-teal-500 hover:underline";
+const CustomLink = ({ data, ...props }: CustomLinkProps) => {
+  const linkStyle = cn(
+    "text-[#232125] opacity-75 text-3xl transition-all duration-200 ease-in-out",
+    "hover:text-black hover:opacity-100",
+    "dark:text-neutral-600 dark:hover:text-[#fdfdfb] dark:hover:opacity-100",
+    props.className,
+  );
 
   if (data.anchor) {
     return (

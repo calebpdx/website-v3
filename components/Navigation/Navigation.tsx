@@ -5,7 +5,7 @@ import {
   LinkType,
 } from "@/sanity/types/navigation";
 import { SanityReference } from "next-sanity";
-import MainNavigation from "./MainNav";
+import NavigationHeader from "./NavigationHeader";
 
 // import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
 // import { Navigation as NavigationType, LinkType } from "@/lib/types/navigation";
@@ -126,7 +126,7 @@ const Navigation = async ({ data }: { data: SanityReference }) => {
     return null;
   }
 
-  return <MainNavigation data={navigation} />;
+  return <NavigationHeader data={navigation} />;
 };
 
 export default Navigation;
