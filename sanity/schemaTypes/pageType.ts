@@ -35,7 +35,12 @@ export const pageType = defineType({
       of: [
         {
           type: "reference",
-          to: [{ type: "clientCloud" }, { type: "basicHeroCta" }],
+          to: [
+            { type: "clientCloud" },
+            { type: "basicHeroCta" },
+            { type: "descriptiveCta" },
+            { type: "recommendations" },
+          ],
         },
       ],
     }),
