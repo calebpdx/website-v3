@@ -1,4 +1,4 @@
-import { Slug } from "sanity";
+import { SanityDocument } from "next-sanity";
 
 export interface Navigation {
   _id: string;
@@ -13,14 +13,7 @@ export interface Navigation {
 
 type LinkArray = Page | LinkType;
 
-export interface LinkType {
-  _id: string;
-  _rev: string;
-  _type: "link";
-  _updatedAt: string;
-  _createdAt: string;
-  title: string;
-  slug: Slug;
-  internalName: string;
-  navigation: {};
+export interface LinkType extends SanityDocument {
+  name?: string;
+  anchor?: string;
 }

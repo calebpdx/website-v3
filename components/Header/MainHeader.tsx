@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@/utils/cn";
 import { Navigation } from "../Navigation";
 import { MainHeaderProps } from "./types";

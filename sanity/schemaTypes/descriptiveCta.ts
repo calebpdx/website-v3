@@ -11,6 +11,11 @@ export const descriptiveCta = defineType({
       title: "Internal Name",
     }),
     defineField({
+      name: "anchor",
+      title: "Anchor",
+      type: "string",
+    }),
+    defineField({
       name: "backgroundImage",
       type: "reference",
       to: [{ type: "imageWrapper" }],

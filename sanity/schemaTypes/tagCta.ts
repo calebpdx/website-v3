@@ -1,15 +1,14 @@
 import { defineField, defineType } from "sanity";
 
-export const basicHeroCtaType = defineType({
-  name: "basicHeroCta",
-  title: "Basic Hero CTA",
+export const tagCta = defineType({
+  name: "tagCta",
+  title: "Tag CTA",
   type: "document",
   fields: [
     defineField({
-      name: "internalName",
+      name: "name",
       title: "Internal Name",
       type: "string",
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "anchor",
@@ -17,21 +16,15 @@ export const basicHeroCtaType = defineType({
       type: "string",
     }),
     defineField({
-      name: "header",
-      title: "Header",
+      name: "title",
+      title: "Title",
       type: "string",
     }),
     defineField({
-      name: "subHeader",
-      title: "Sub Header",
-      type: "string",
+      name: "description",
+      title: "Description",
+      type: "text",
     }),
-    defineField({
-      name: "callToAction",
-      title: "Call to Action",
-      type: "string",
-    }),
-
     defineField({
       name: "tags",
       title: "Tags",
@@ -39,7 +32,7 @@ export const basicHeroCtaType = defineType({
       /* @ts-ignore */
       of: [
         {
-          type: "string",
+          type: "tag",
         },
       ],
     }),

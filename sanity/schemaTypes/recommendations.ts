@@ -11,6 +11,11 @@ export const recommendations = defineType({
       title: "Internal Name",
     }),
     defineField({
+      name: "anchor",
+      title: "Anchor",
+      type: "string",
+    }),
+    defineField({
       name: "content",
       type: "array",
       of: [

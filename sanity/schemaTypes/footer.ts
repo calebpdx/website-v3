@@ -30,7 +30,7 @@ export const footerType = defineType({
       of: [
         {
           type: "reference",
-          to: [{ type: "customUrl" }],
+          to: [{ type: "customUrl" }, { type: "page" }, { type: "navigation" }],
         },
       ],
     }),

@@ -1,9 +1,11 @@
+"use client";
+
 import {
   Navigation as NavigationProps,
   LinkType,
 } from "@/sanity/types/navigation";
 import Image from "next/image";
-import { CustomLink } from "../CustomLink";
+import NavLink from "./NavLink";
 
 const NavigationHeader = ({ data }: { data: NavigationProps }) => {
   return (
@@ -30,23 +32,11 @@ const NavigationHeader = ({ data }: { data: NavigationProps }) => {
         <nav className="flex items-center">
           <ul className="flex gap-6">
             {data.links.map((link: LinkType, index: number) => {
-              // link type is a reference to a button
-              if (!!link._type && link._type.toString() === "button") {
-                return (
-                  <li key={`${link.title}-${index}`}>
-                    <button className="btn">{link.title}</button>
-                  </li>
-                );
-              }
-
-              // link type is a reference to a customUrl (anchor, external link, or page reference)
-              if (!!link._type && link._type.toString() === "customUrl") {
-                return (
-                  <li key={`${link.title}-${index}`}>
-                    <CustomLink data={link} />
-                  </li>
-                );
-              }
+              return (
+                <li key={`${link.title}-${index}`}>
+                  <NavLink link={link} />
+                </li>
+              );
             })}
           </ul>
         </nav>

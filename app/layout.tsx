@@ -18,12 +18,12 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={cn(
           inter.className,
           montserrat.className,
-          "min-w-dvw box-border font-sans text-teal-500 min-h-dvh items-center flex flex-col bg-[#232125]",
+          "min-w-dvw box-border font-sans min-h-dvh items-center flex flex-col bg-[#232125]",
         )}
       >
         {children}
