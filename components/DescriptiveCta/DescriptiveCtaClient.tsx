@@ -23,14 +23,14 @@ const DescriptiveCtaClient = ({
   // Style the protable text block for this content type
   const contentBlock = {
     block: ({ children }: any) => (
-      <p className="max-w-2xl leading-10 p-0 m-0">{children}</p>
+      <p className="max-w-2xl leading-10 p-0 m-0 text-2xl lg:text-3xl">
+        {children}
+      </p>
     ),
   };
 
-  console.log("DescriptiveCtaClient", content, image, contentBlock);
-
   return (
-    <div className="relative w-full text-primary-light text-3xl flex flex-col items-center">
+    <div className="relative w-full text-primary-light flex flex-col items-center">
       {image && image.url && (
         <Image
           src={image.url}
@@ -41,11 +41,12 @@ const DescriptiveCtaClient = ({
             "absolute -z-10 transition-all duration-500 ease-in-out grayscale opacity-40",
           )}
           alt={image.alt}
+          priority
         />
       )}
       <motion.div
         ref={ref}
-        className="container max-w-7xl min-h-[1000px] flex flex-col gap-y-10 items-start justify-center"
+        className="container max-w-7xl px-10 py-20 xl:p-0 lg:min-h-[1000px] flex flex-col gap-y-10 items-start justify-center"
         style={{
           transform: isInView ? "none" : "translateY(-300px)",
           opacity: isInView ? 1 : 0,

@@ -16,6 +16,18 @@ export const experience = defineType({
       type: "string",
     }),
     defineField({
+      name: "theme",
+      title: "Theme",
+      type: "string",
+      options: {
+        list: [
+          { value: "light", title: "Light" },
+          { value: "dark", title: "Dark" },
+        ],
+        layout: "radio",
+      },
+    }),
+    defineField({
       name: "header",
       title: "Header",
       type: "string",

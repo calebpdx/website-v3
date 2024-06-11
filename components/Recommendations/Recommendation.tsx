@@ -1,7 +1,8 @@
+"use client";
+
 import { PortableText, PortableTextBlock } from "next-sanity";
 import { CarouselItem } from "../ui/carousel";
 import React from "react";
-import { getImageUrl } from "@/lib/utils";
 import Image from "next/image";
 
 type RecommendationProps = {
@@ -9,18 +10,14 @@ type RecommendationProps = {
     referrerName: string;
     referrerTitle: string;
     referrerImage: {
-      _ref: string;
-      _type: string;
+      url: string;
+      alt: string;
     };
   };
   content: PortableTextBlock[];
 };
 
-const Recommendation = async ({ rec, content }: RecommendationProps) => {
-  const imageUrl = rec.referrerImage
-    ? await getImageUrl(rec.referrerImage)
-    : null;
-
+const Recommendation = ({ rec, content }: RecommendationProps) => {
   return (
     <CarouselItem className="flex flex-col items-center justify-center group transition duration-500 relative">
       <svg
@@ -34,13 +31,13 @@ const Recommendation = async ({ rec, content }: RecommendationProps) => {
           fillRule="evenodd"
         />
       </svg>
-      <div className="p-1 mx-10 text-primary-dark dark:text-primary-light text-4xl flex flex-col py-8">
+      <div className="p-1 mx-10 text-primary-dark dark:text-primary-light text-2xl flex flex-col py-8">
         <PortableText value={content} />
         <div className="flex mt-8 gap-4 items-center">
-          {imageUrl && imageUrl.url && (
+          {rec.referrerImage && rec.referrerImage.url && (
             <Image
-              src={imageUrl.url}
-              alt={imageUrl.alt}
+              src={rec.referrerImage.url}
+              alt={rec.referrerImage.alt}
               width={75}
               height={75}
               className="rounded-full grayscale group-hover:grayscale-0"

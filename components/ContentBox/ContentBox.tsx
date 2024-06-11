@@ -13,6 +13,8 @@ const DescriptiveCta = dynamic(
   () => import("@/components/DescriptiveCta/DescriptiveCta"),
 );
 
+const Experience = dynamic(() => import("@/components/Experience/Experience"));
+
 const Recommendations = dynamic(
   () => import("@/components/Recommendations/Recommendations"),
 );
@@ -30,6 +32,8 @@ const ContentBox = ({ content }: { content: SanityDocument[] }) => {
             return <BasicHeroCta key={item._id} data={item} />;
           case "descriptiveCta":
             return <DescriptiveCta key={item._id} data={item} />;
+          case "experience":
+            return <Experience key={item._id} data={item} />;
           case "recommendations":
             return <Recommendations key={item._id} data={item} />;
           case "tagCta":

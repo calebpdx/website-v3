@@ -11,7 +11,6 @@ import { navigationType } from "./navigation";
 import { pageType } from "./pageType";
 import { recommendation } from "./recommendation";
 import { recommendations } from "./recommendations";
-import { tagType } from "./tag";
 import { tagCta } from "./tagCta";
 
 export const schemaTypes = [
@@ -28,6 +27,5 @@ export const schemaTypes = [
   pageType,
   recommendation,
   recommendations,
-  tagType,
   tagCta,
 ];

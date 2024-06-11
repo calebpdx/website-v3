@@ -1,14 +1,14 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import { Navigation } from "../Navigation";
 import { MainHeaderProps } from "./types";
 import { GradientHoverLink } from "../ui";
+import NavigationHeader from "../Navigation/NavigationHeader";
 
 const MainHeader = ({ navigation }: MainHeaderProps) => {
   return (
     <header className="w-full bg-primary-light dark:bg-black flex flex-col items-center">
-      <Navigation data={navigation} />
+      <NavigationHeader data={navigation} />
       <div
         className={cn(
           "container my-16 px-4 w-full flex flex-col items-center",

@@ -4,7 +4,7 @@ import {
   Navigation as NavigationType,
   LinkType,
 } from "@/sanity/types/navigation";
-import { SanityReference } from "next-sanity";
+import { SanityDocument, SanityReference } from "next-sanity";
 import NavigationHeader from "./NavigationHeader";
 
 // import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
@@ -115,18 +115,23 @@ import NavigationHeader from "./NavigationHeader";
 //   );
 // }
 
-const Navigation = async ({ data }: { data: SanityReference }) => {
-  const navigation = await client.fetch<NavigationType>(NAVIGATION_QUERY, {
-    id: data._ref,
-  });
+const Navigation = async ({
+  data,
+}: {
+  data: {
+    includeLogo: boolean;
+    links: LinkType[];
+  };
+}) => {
+  // const navigation = await client.fetch<NavigationType>(NAVIGATION_QUERY, {
+  //   id: data._ref,
+  // });
 
-  console.log("navigation Data", navigation);
+  // if (!navigation) {
+  //   return null;
+  // }
 
-  if (!navigation) {
-    return null;
-  }
-
-  return <NavigationHeader data={navigation} />;
+  return <NavigationHeader data={data} />;
 };
 
 export default Navigation;

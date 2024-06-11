@@ -29,8 +29,8 @@ const RecommendationCarousel = ({
             />
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="lg:flex hidden" />
+        <CarouselNext className="lg:flex hidden" />
       </Carousel>
     </>
   );

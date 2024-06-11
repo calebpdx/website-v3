@@ -29,6 +29,12 @@ export const job = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "position",
+      title: "Position",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "startDate",
       title: "Start Date",
       type: "date",
@@ -50,17 +56,6 @@ export const job = defineType({
       title: "Content",
       type: "array",
       of: [{ type: "block" }],
-    }),
-    defineField({
-      name: "tags",
-      title: "Tags",
-      type: "array",
-      /* @ts-ignore */
-      of: [
-        {
-          type: "tag",
-        },
-      ],
     }),
   ],
 });

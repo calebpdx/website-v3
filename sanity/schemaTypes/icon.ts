@@ -10,7 +10,6 @@ export const icon = defineType({
       type: "string",
       title: "Internal Name",
     }),
-
     defineField({
       name: "svgCode",
       type: "text",

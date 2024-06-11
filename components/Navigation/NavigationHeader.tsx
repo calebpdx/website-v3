@@ -1,11 +1,8 @@
 "use client";
 
-import {
-  Navigation as NavigationProps,
-  LinkType,
-} from "@/sanity/types/navigation";
+import { Navigation as NavigationProps } from "@/sanity/types/navigation";
 import Image from "next/image";
-import NavLink from "./NavLink";
+import NavBar from "./NavBar";
 
 const NavigationHeader = ({ data }: { data: NavigationProps }) => {
   return (
@@ -28,19 +25,7 @@ const NavigationHeader = ({ data }: { data: NavigationProps }) => {
           />
         </>
       )}
-      {data.links && data.links.length && (
-        <nav className="flex items-center">
-          <ul className="flex gap-6">
-            {data.links.map((link: LinkType, index: number) => {
-              return (
-                <li key={`${link.title}-${index}`}>
-                  <NavLink link={link} />
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      )}
+      {data.links && data.links.length && <NavBar data={data.links} />}
     </div>
   );
 };

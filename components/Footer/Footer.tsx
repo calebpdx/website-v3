@@ -1,10 +1,9 @@
 import { client } from "@/sanity/lib/client";
 import { FOOTER_QUERY } from "@/sanity/lib/queries";
-import { LinkType } from "@/sanity/types/navigation";
 import { SanityDocument } from "next-sanity";
 import Image from "next/image";
-import NavLink from "../Navigation/NavLink";
 import { SiGithub, SiX, SiLinkedin } from "@icons-pack/react-simple-icons";
+import NavBar from "../Navigation/NavBar";
 
 const socials = [
   {
@@ -36,7 +35,7 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
 
   return (
     <footer className="min-h-24 w-full text-white flex justify-center py-16 dark:bg-black bg-primary-dark">
-      <div className="container flex flex-col justify-between">
+      <div className="container flex flex-col justify-between px-8 xl:px-0">
         <div className="flex justify-between pb-12">
           <Image
             src="/signature-v3-darkmode.png"
@@ -44,15 +43,7 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
             width={195}
             alt="Caleb White signature Logo"
           />
-          {footer.links[0] && (
-            <ul className="flex gap-4">
-              {footer.links[0].links.map((link: LinkType, index: number) => (
-                <li key={`${link.title}-${index}`}>
-                  <NavLink link={link} />
-                </li>
-              ))}
-            </ul>
-          )}
+          {footer.links[0] && <NavBar data={footer.links[0].links} />}
         </div>
         <div className="flex justify-between items-center border-t-2 border-primary-light border-opacity-5 pt-4">
           <div className="flex flex-col opacity-50">

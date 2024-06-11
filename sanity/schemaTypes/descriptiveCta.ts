@@ -16,6 +16,18 @@ export const descriptiveCta = defineType({
       type: "string",
     }),
     defineField({
+      name: "theme",
+      title: "Theme",
+      type: "string",
+      options: {
+        list: [
+          { value: "light", title: "Light" },
+          { value: "dark", title: "Dark" },
+        ],
+        layout: "radio",
+      },
+    }),
+    defineField({
       name: "backgroundImage",
       type: "reference",
       to: [{ type: "imageWrapper" }],

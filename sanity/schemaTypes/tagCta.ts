@@ -16,6 +16,18 @@ export const tagCta = defineType({
       type: "string",
     }),
     defineField({
+      name: "theme",
+      title: "Theme",
+      type: "string",
+      options: {
+        list: [
+          { value: "light", title: "Light" },
+          { value: "dark", title: "Dark" },
+        ],
+        layout: "radio",
+      },
+    }),
+    defineField({
       name: "title",
       title: "Title",
       type: "string",
@@ -24,17 +36,6 @@ export const tagCta = defineType({
       name: "description",
       title: "Description",
       type: "text",
-    }),
-    defineField({
-      name: "tags",
-      title: "Tags",
-      type: "array",
-      /* @ts-ignore */
-      of: [
-        {
-          type: "tag",
-        },
-      ],
     }),
   ],
 });

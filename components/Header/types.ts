@@ -1,5 +1,8 @@
-import { SanityReference } from "next-sanity";
+import { LinkType } from "@/sanity/types/navigation";
 
 export interface MainHeaderProps {
-  navigation: SanityReference;
+  navigation: {
+    includeLogo: boolean;
+    links: LinkType[];
+  };
 }
