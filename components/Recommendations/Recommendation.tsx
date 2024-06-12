@@ -1,7 +1,7 @@
 "use client";
 
 import { PortableText, PortableTextBlock } from "next-sanity";
-import { CarouselItem } from "../ui/carousel";
+import { CarouselItem } from "@/components/ui/carousel";
 import React from "react";
 import Image from "next/image";
 
