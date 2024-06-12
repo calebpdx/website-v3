@@ -48,7 +48,16 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
         <div className="flex justify-between items-center border-t-2 border-primary-light border-opacity-5 pt-4">
           <div className="flex flex-col opacity-50">
             <small>&copy; {date.getFullYear()} Caleb White</small>
-            <small>Designed & Developed by Caleb White</small>
+            <small>
+              Designed & Developed by Caleb White |{" "}
+              <a
+                href="https://www.github.com/calebpdx/website-v3"
+                className="underline hover:no-underline hover:text-primary-light"
+                rel="_blank"
+              >
+                Github Repo
+              </a>
+            </small>
           </div>
           <ul className="flex gap-4">
             {socials.map((social, index) => (
