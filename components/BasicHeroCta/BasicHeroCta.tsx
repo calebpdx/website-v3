@@ -1,5 +1,4 @@
 const BasicHeroCta = ({ data }: { data: any }) => {
-  console.log("basic hero cta", data);
   return (
     <section className="container justify-center items-center flex py-40 flex-col">
       <div className="flex flex-col max-w-6xl w-full gap-4">

@@ -61,8 +61,6 @@ const exp = tv({
 });
 
 const Experience = ({ data }: { data: any }) => {
-  console.log("EXPERIENCE CLIENT DATA", data);
-
   const [selectedJob, setSelectedJob] = useState<number>(0);
   const { container, title, description, expContainer, button, aside } = exp({
     color: data.theme,
