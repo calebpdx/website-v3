@@ -2,8 +2,8 @@
 
 import { cn } from "@/utils/cn";
 import { MainHeaderProps } from "./types";
-import { GradientHoverLink } from "@/components/ui/GradientHoverLink";
-import NavigationHeader from "../Navigation/NavigationHeader";
+import { GradientHoverLink } from "@/components/GradientHoverLink";
+import NavigationHeader from "@/components/Navigation/NavigationHeader";
 
 const MainHeader = ({ navigation }: MainHeaderProps) => {
   return (

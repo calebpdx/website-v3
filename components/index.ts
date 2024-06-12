@@ -7,4 +7,4 @@ export * from "./Footer";
 export * from "./Navigation";
 export * from "./Page";
 export * from "./Recommendations";
-export * from "./ui";
+export * from "./GradientHoverLink";
