@@ -4,11 +4,16 @@ export const tagCta = defineType({
   name: "tagCta",
   title: "Tag CTA",
   type: "document",
+  initialValue: {
+    theme: "light",
+    name: "Tag CTA Module",
+  },
   fields: [
     defineField({
       name: "name",
       title: "Internal Name",
       type: "string",
+      options: {},
     }),
     defineField({
       name: "anchor",

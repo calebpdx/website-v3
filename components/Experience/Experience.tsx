@@ -1,16 +1,13 @@
-const Experience = ({ data }: { data: any }) => {
-  console.log("EXPERIENCE DATA", data);
+import { client } from "@/sanity/lib/client";
+import Experience from "./ExperienceClient";
+import { EXPERIENCE_QUERY } from "@/sanity/lib/queries";
 
-  return (
-    <section className="bg-primary-dark">
-      <h1 className="text-white">Experience</h1>
+const ExperienceSection = async ({ data }: { data: any }) => {
+  const experienceData = data.jobs.length
+    ? await client.fetch(EXPERIENCE_QUERY, { id: data._id })
+    : [];
 
-      <div>
-        <aside></aside>
-        <div></div>
-      </div>
-    </section>
-  );
+  return <Experience data={experienceData} />;
 };
 
-export default Experience;
+export default ExperienceSection;

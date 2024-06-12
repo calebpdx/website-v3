@@ -8,3 +8,4 @@ export const NAVIGATION_QUERY = groq`*[_type == "navigation" && _id == $id]{incl
 export const FOOTER_QUERY = groq`*[_type == "footer" && _id == $id]{links[]->{..., links[]->}}[0]`;
 export const TAGS_QUERY = groq`*[_type == "tagCta" && _id == $id]{tags[]->{name, icon->}}`;
 export const RECOMMENDATIONS_QUERY = groq`*[_type == "recommendations" && _id == $id]{anchor, content[]->{...,referrerImage->{"url": image.asset->url, alt}}}[0]`;
+export const EXPERIENCE_QUERY = groq`*[_type == "experience" && _id == $id]{anchor, title, description, theme, jobs[]->{...,logo->{"url": image.asset->url, alt}}}[0]`;

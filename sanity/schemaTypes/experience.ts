@@ -28,8 +28,8 @@ export const experience = defineType({
       },
     }),
     defineField({
-      name: "header",
-      title: "Header",
+      name: "title",
+      title: "Title",
       type: "string",
     }),
     defineField({
@@ -39,12 +39,11 @@ export const experience = defineType({
     }),
     defineField({
       name: "jobs",
-      title: "Jobs",
       type: "array",
-      /* @ts-ignore */
       of: [
         {
-          type: "job",
+          type: "reference",
+          to: [{ type: "job" }],
         },
       ],
     }),

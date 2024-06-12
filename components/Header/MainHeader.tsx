@@ -11,14 +11,14 @@ const MainHeader = ({ navigation }: MainHeaderProps) => {
       <NavigationHeader data={navigation} />
       <div
         className={cn(
-          "container my-16 px-4 w-full flex flex-col items-center",
+          "container my-16 px-8 w-full flex flex-col items-center",
           "lg:px-0 lg:my-40",
           "xl:max-w-7xl",
         )}
       >
         <p
           className={cn(
-            "text-5xl text-primary-dark dark:text-primary-light font-montserrat leading-relaxed",
+            "text-4xl text-primary-dark dark:text-primary-light font-montserrat leading-relaxed lg:text-5xl",
             "xl:text-8xl xl:leading-[95pt]",
           )}
         >
