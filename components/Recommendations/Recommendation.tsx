@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { PortableText, PortableTextBlock } from "next-sanity";
-import { CarouselItem } from "../ui/carousel";
+import { CarouselItem } from "../carousel";
 
 type RecommendationProps = {
   rec: {

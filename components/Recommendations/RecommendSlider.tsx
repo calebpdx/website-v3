@@ -5,7 +5,7 @@ import {
   CarouselContent,
   CarouselNext,
   CarouselPrevious,
-} from "../ui/carousel";
+} from "../carousel";
 import Recommendation from "./Recommendation";
 
 const RecommendationCarousel = ({
