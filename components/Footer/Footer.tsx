@@ -43,7 +43,9 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
             width={195}
             alt="Caleb White signature Logo"
           />
-          {footer.links[0] && <NavBar data={footer.links[0].links} />}
+          {footer.links && footer.links[0] && (
+            <NavBar data={footer.links[0].links} />
+          )}
         </div>
         <div className="flex justify-between items-center border-t-2 border-primary-light border-opacity-5 pt-4">
           <div className="flex flex-col opacity-50">

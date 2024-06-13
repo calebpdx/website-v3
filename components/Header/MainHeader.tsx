@@ -1,11 +1,11 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import { MainHeaderProps } from "./types";
+import { HeaderProps } from "./types";
 import { GradientHoverLink } from "@/components/GradientHoverLink";
 import NavigationHeader from "@/components/Navigation/NavigationHeader";
 
-const MainHeader = ({ navigation }: MainHeaderProps) => {
+const MainHeader = ({ navigation }: HeaderProps) => {
   return (
     <header className="w-full bg-primary-light dark:bg-black flex flex-col items-center">
       <NavigationHeader data={navigation} />
