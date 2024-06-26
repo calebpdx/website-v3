@@ -1,6 +1,8 @@
 import { SanityDocument } from "next-sanity";
 import dynamic from "next/dynamic";
 
+const ChangeLog = dynamic(() => import("@/components/ChangeLog/ChangeLog"));
+
 const ClientCloud = dynamic(
   () => import("@/components/ClientCloud/ClientCloud"),
 );
@@ -26,6 +28,8 @@ const ContentBox = ({ content }: { content: SanityDocument[] }) => {
     <>
       {content.map((item) => {
         switch (item._type) {
+          case "changeLog":
+            return <ChangeLog key={item._id} data={item} />;
           case "clientCloud":
             return <ClientCloud key={item._id} data={item} />;
           case "basicHeroCta":

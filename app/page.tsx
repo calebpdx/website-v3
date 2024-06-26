@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <>
       <MainHeader navigation={page.navigation} />
-      {page?.title && <PageTemplate page={page} />}
+      {page && <PageTemplate page={page} />}
       {page?.footer && <Footer data={page.footer} />}
     </>
   );

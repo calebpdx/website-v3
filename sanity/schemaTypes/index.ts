@@ -1,4 +1,5 @@
 import { basicHeroCtaType } from "./basicHeroCta";
+import { changeLog } from "./changeLog";
 import { clientCloudType } from "./clientCloud";
 import { customUrlType } from "./customUrl";
 import { descriptiveCta } from "./descriptiveCta";
@@ -15,6 +16,7 @@ import { tagCta } from "./tagCta";
 
 export const schemaTypes = [
   basicHeroCtaType,
+  changeLog,
   clientCloudType,
   customUrlType,
   descriptiveCta,

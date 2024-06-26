@@ -6,7 +6,7 @@ import NavBar from "./NavBar";
 
 const NavigationHeader = ({ data }: { data: NavigationProps }) => {
   return (
-    <div className="container mx-auto pt-8 px-8 2xl:px-0 flex justify-between dark:text-neutral-200">
+    <div className="container mx-auto pt-8 px-8 md:px-2 2xl:px-0 flex justify-between dark:text-neutral-200">
       {data.includeLogo && (
         <>
           <Image

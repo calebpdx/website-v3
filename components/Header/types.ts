@@ -1,6 +1,6 @@
 import { LinkType } from "@/sanity/types/navigation";
 
-export interface MainHeaderProps {
+export interface HeaderProps {
   navigation: {
     includeLogo: boolean;
     links: LinkType[];
