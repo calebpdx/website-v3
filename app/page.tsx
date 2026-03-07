@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 export default async function Home() {
   const page = await client.fetch<Page>(HOMEPAGE_QUERY);
 
+
   if (!page) {
     notFound();
   }
