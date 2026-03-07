@@ -37,7 +37,7 @@ const Recommendation = ({ rec, content }: RecommendationProps) => {
           {rec.referrerImage && rec.referrerImage.url && (
             <Image
               src={rec.referrerImage.url}
-              alt={rec.referrerImage.alt}
+              alt={rec.referrerImage.alt ?? `Photo of ${rec.referrerName}`}
               width={75}
               height={75}
               className="rounded-full grayscale group-hover:grayscale-0"

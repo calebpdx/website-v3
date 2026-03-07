@@ -2,11 +2,11 @@
 
 import { PortableText, PortableTextBlock, SanityDocument } from "next-sanity";
 import Image from "next/image";
-import { tv, TVVariantKeys, TVVariants, VariantProps } from "tailwind-variants";
+import { tv, VariantProps } from "tailwind-variants";
 
 interface JobProps extends SanityDocument {
   name: string;
-  compnay: string;
+  company: string;
   position: string;
   startDate: string;
   endDate?: string | null;
@@ -56,7 +56,7 @@ const Job = ({
         {data.logo.url && (
           <Image
             src={data.logo.url}
-            alt={data.logo.alt}
+            alt={data.logo.alt ?? `${data.company} logo`}
             width={64}
             height={64}
           />

@@ -2,7 +2,8 @@ import { client } from "@/sanity/lib/client";
 import { FOOTER_QUERY } from "@/sanity/lib/queries";
 import { SanityDocument } from "next-sanity";
 import Image from "next/image";
-import { SiGithub, SiX, SiLinkedin } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
+import { Linkedin } from "lucide-react";
 import NavBar from "../Navigation/NavBar";
 
 const socials = [
@@ -19,7 +20,7 @@ const socials = [
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/calebawhite",
-    icon: <SiLinkedin size={24} />,
+    icon: <Linkedin size={24} />,
   },
 ];
 
@@ -47,7 +48,7 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
             <NavBar data={footer.links[0].links} />
           )}
         </div>
-        <div className="flex justify-between items-center border-t-2 border-primary-light border-opacity-5 pt-4">
+        <div className="flex justify-between items-center border-t-2 border-primary-light/5 pt-4">
           <div className="flex flex-col opacity-50">
             <small>&copy; {date.getFullYear()} Caleb White</small>
             <small>
@@ -55,7 +56,8 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
               <a
                 href="https://www.github.com/calebpdx/website-v3"
                 className="underline hover:no-underline hover:text-primary-light"
-                rel="_blank"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Github Repo
               </a>
@@ -68,6 +70,7 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${social.name} profile`}
                   className="opacity-50 text-primary-light hover:opacity-100 transition-opacity"
                 >
                   {social.icon}

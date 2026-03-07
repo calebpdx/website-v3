@@ -6,7 +6,8 @@ const DescriptiveCta = async ({ data }: { data: SanityDocument }) => {
   const imageContent =
     data && data.backgroundImage._ref
       ? await client.fetch(
-          `*[_type == "imageWrapper" && _id == "${data.backgroundImage._ref}"]{"url": image.asset->url, alt}[0]`,
+          `*[_type == "imageWrapper" && _id == $ref]{"url": image.asset->url, alt}[0]`,
+          { ref: data.backgroundImage._ref },
         )
       : null;
 
