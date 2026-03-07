@@ -1,8 +1,6 @@
 import { SanityDocument } from "next-sanity";
 
 const ChangeLog = async ({ data }: { data: SanityDocument }) => {
-  console.log("CHANGELOG", data);
-
   const websiteRepo = await fetch(
     "https://api.github.com/repos/calebpdx/website-v3",
   );
@@ -12,14 +10,10 @@ const ChangeLog = async ({ data }: { data: SanityDocument }) => {
     return "Error fetching GitHub data";
   }
 
-  console.log("GITHUB", ghRes);
-
   const releases = await fetch(
     "https://api.github.com/repos/calebpdx/website-v3/releases",
   );
   const releasesRes = await releases.json();
-
-  console.log("GITHUB Releases", releasesRes);
 
   if (!data.includeComponent) {
     return null;

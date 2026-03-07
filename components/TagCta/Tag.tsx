@@ -1,5 +1,3 @@
-"use client";
-
 const Tag = ({ data }: { data: any }) => {
   return (
     <div className="flex gap-x-2 items-center bg-primary-light/20 px-3 py-2 rounded-md">

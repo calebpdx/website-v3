@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/utils/cn";
 import { HeaderProps } from "./types";
 import { GradientHoverLink } from "@/components/GradientHoverLink";
@@ -16,7 +14,7 @@ const MainHeader = ({ navigation }: HeaderProps) => {
           "lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl",
         )}
       >
-        <p
+        <h1
           className={cn(
             "text-4xl text-primary-dark dark:text-primary-light font-montserrat leading-relaxed lg:text-5xl",
             "2xl:text-8xl lg:leading-relaxed 2xl:leading-normal ",
@@ -31,7 +29,7 @@ const MainHeader = ({ navigation }: HeaderProps) => {
           <GradientHoverLink href="#about">building</GradientHoverLink> web
           experiences, applications, and{" "}
           <GradientHoverLink href="#blog">more</GradientHoverLink>
-        </p>
+        </h1>
       </div>
     </header>
   );

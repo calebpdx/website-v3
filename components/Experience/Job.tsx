@@ -2,11 +2,11 @@
 
 import { PortableText, PortableTextBlock, SanityDocument } from "next-sanity";
 import Image from "next/image";
-import { tv, TVVariantKeys, TVVariants, VariantProps } from "tailwind-variants";
+import { tv, VariantProps } from "tailwind-variants";
 
 interface JobProps extends SanityDocument {
   name: string;
-  compnay: string;
+  company: string;
   position: string;
   startDate: string;
   endDate?: string | null;

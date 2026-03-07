@@ -19,7 +19,7 @@ const navItem = {
 
 const NavBar = ({ data }: { data: LinkType[] }) => {
   return (
-    <nav className="hidden items-center lg:flex">
+    <nav aria-label="Main navigation" className="hidden items-center lg:flex">
       <motion.ul
         className="hidden lg:flex gap-6"
         initial="hidden"

@@ -26,7 +26,7 @@ export const footerType = defineType({
       name: "links",
       title: "Links",
       type: "array",
-      /* @ts-ignore */
+
       of: [
         {
           type: "reference",

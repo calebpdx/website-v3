@@ -1,5 +1,3 @@
-"use client";
-
 import { HeaderProps } from "./types";
 import NavigationHeader from "@/components/Navigation/NavigationHeader";
 

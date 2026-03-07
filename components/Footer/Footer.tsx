@@ -56,7 +56,8 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
               <a
                 href="https://www.github.com/calebpdx/website-v3"
                 className="underline hover:no-underline hover:text-primary-light"
-                rel="_blank"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Github Repo
               </a>
@@ -69,6 +70,7 @@ const Footer = async ({ data }: { data: SanityDocument }) => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${social.name} profile`}
                   className="opacity-50 text-primary-light hover:opacity-100 transition-opacity"
                 >
                   {social.icon}
