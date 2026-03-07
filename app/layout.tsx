@@ -23,7 +23,7 @@ const RootLayout = ({
         className={cn(
           inter.className,
           montserrat.className,
-          "min-w-dvw box-border font-sans min-h-dvh items-center flex flex-col bg-[#232125]",
+          "w-full box-border font-sans min-h-dvh items-center flex flex-col bg-[#232125] overflow-x-hidden",
         )}
       >
         {children}

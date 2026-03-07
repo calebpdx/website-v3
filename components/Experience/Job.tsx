@@ -56,7 +56,7 @@ const Job = ({
         {data.logo.url && (
           <Image
             src={data.logo.url}
-            alt={data.logo.alt}
+            alt={data.logo.alt ?? `${data.company} logo`}
             width={64}
             height={64}
           />

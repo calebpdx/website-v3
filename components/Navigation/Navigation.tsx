@@ -4,7 +4,7 @@ import {
   Navigation as NavigationType,
   LinkType,
 } from "@/sanity/types/navigation";
-import { SanityDocument, SanityReference } from "next-sanity";
+import { SanityDocument } from "next-sanity";
 import NavigationHeader from "./NavigationHeader";
 
 // import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem, Link, Button} from "@nextui-org/react";
