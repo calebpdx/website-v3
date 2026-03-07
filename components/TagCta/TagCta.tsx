@@ -2,7 +2,7 @@ import { SanityDocument } from "next-sanity";
 import Tag from "./Tag";
 import {
   SiContentful,
-  SiCss3,
+  SiCss,
   SiGit,
   SiGithub,
   SiGraphql,
@@ -11,7 +11,6 @@ import {
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
-  SiOpenai,
   SiPostgresql,
   SiReact,
   SiRedwoodjs,
@@ -22,6 +21,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "@icons-pack/react-simple-icons";
+import { BrainCircuit } from "lucide-react";
 
 const skills = [
   { name: "TypeScript", icon: <SiTypescript size={24} /> },
@@ -32,7 +32,7 @@ const skills = [
   { name: "GraphQL", icon: <SiGraphql size={24} /> },
   { name: "Node.js", icon: <SiNodedotjs size={24} /> },
   { name: "Nest.js", icon: <SiNestjs size={24} /> },
-  { name: "CSS", icon: <SiCss3 size={24} /> },
+  { name: "CSS", icon: <SiCss size={24} /> },
   { name: "SASS", icon: <SiSass size={24} /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={24} /> },
   { name: "MongoDB", icon: <SiMongodb size={24} /> },
@@ -43,7 +43,7 @@ const skills = [
   { name: "Contentful", icon: <SiContentful size={24} /> },
   { name: "Github", icon: <SiGithub size={24} /> },
   { name: "Git", icon: <SiGit size={24} /> },
-  { name: "OpenAI", icon: <SiOpenai size={24} /> },
+  { name: "OpenAI", icon: <BrainCircuit size={24} /> },
 ];
 
 const TagCta = async ({ data }: { data: SanityDocument }) => {

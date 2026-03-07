@@ -2,7 +2,8 @@ import { client } from "@/sanity/lib/client";
 import { FOOTER_QUERY } from "@/sanity/lib/queries";
 import { SanityDocument } from "next-sanity";
 import Image from "next/image";
-import { SiGithub, SiX, SiLinkedin } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
+import { Linkedin } from "lucide-react";
 import NavBar from "../Navigation/NavBar";
 
 const socials = [
@@ -19,7 +20,7 @@ const socials = [
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/calebawhite",
-    icon: <SiLinkedin size={24} />,
+    icon: <Linkedin size={24} />,
   },
 ];
 

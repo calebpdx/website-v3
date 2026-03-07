@@ -7,15 +7,22 @@ import { token } from "./token";
 export async function sanityFetch<QueryResponse>({
   query,
   params = {},
-  perspective = draftMode().isEnabled ? "previewDrafts" : "published",
-  stega = perspective === "previewDrafts" ||
-    process.env.VERCEL_ENV === "preview",
+  perspective,
+  stega,
 }: {
   query: string;
   params?: QueryParams;
   perspective?: Omit<ClientPerspective, "raw">;
   stega?: boolean;
 }) {
+  const { isEnabled } = await draftMode();
+  if (perspective === undefined) {
+    perspective = isEnabled ? "previewDrafts" : "published";
+  }
+  if (stega === undefined) {
+    stega =
+      perspective === "previewDrafts" || process.env.VERCEL_ENV === "preview";
+  }
   if (perspective === "previewDrafts") {
     return client.fetch<QueryResponse>(query, params, {
       stega,

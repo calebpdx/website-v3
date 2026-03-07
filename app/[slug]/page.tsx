@@ -4,8 +4,9 @@ import { PageTemplate } from "@/components/Page";
 import { Footer } from "@/components/Footer";
 import BasicHeader from "@/components/Header/BasicHeader";
 
-const Page = async ({ params }: { params: { slug: string } }) => {
-  const page = await client.fetch<Page>(PAGE_QUERY, { slug: params.slug });
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const page = await client.fetch<Page>(PAGE_QUERY, { slug });
 
   console.log("PAGE QUERY", page);
 

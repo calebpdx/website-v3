@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { PortableText, PortableTextBlock } from "next-sanity";
 import { useRef } from "react";
-import { inView, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 type DescriptiveCtaClientProps = {
