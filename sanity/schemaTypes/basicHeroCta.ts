@@ -36,7 +36,7 @@ export const basicHeroCtaType = defineType({
       name: "tags",
       title: "Tags",
       type: "array",
-      /* @ts-ignore */
+
       of: [
         {
           type: "string",

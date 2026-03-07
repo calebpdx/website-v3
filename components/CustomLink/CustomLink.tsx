@@ -4,9 +4,9 @@ import { CustomLinkProps } from "./types";
 
 const CustomLink = ({ data, className, ...props }: CustomLinkProps) => {
   const linkStyle = cn(
-    "text-[#232125] opacity-75 text-3xl transition-all duration-200 ease-in-out",
+    "text-primary-dark opacity-75 text-3xl transition-all duration-200 ease-in-out",
     "hover:text-black hover:opacity-100",
-    "dark:text-neutral-600 dark:hover:text-[#fdfdfb] dark:hover:opacity-100",
+    "dark:text-neutral-600 dark:hover:text-primary-light dark:hover:opacity-100",
     className,
   );
 
@@ -28,7 +28,13 @@ const CustomLink = ({ data, className, ...props }: CustomLinkProps) => {
     );
   } else {
     return (
-      <a href={data.external} className={linkStyle} {...props}>
+      <a
+        href={data.external}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={linkStyle}
+        {...props}
+      >
         {data.name}
       </a>
     );

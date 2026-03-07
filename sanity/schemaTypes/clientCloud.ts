@@ -20,7 +20,7 @@ export const clientCloudType = defineType({
       name: "clients",
       title: "Client List",
       type: "array",
-      /* @ts-ignore */
+
       of: [
         {
           type: "image",

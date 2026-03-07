@@ -1,5 +1,3 @@
-"use client";
-
 import { CustomLink } from "../CustomLink";
 import { LinkType } from "@/sanity/types/navigation";
 

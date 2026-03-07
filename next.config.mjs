@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactCompiler: true,
   images: {
     remotePatterns: [
       {
@@ -8,10 +9,6 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    taint: true,
-  },
-  // ...other config settings
 };
 
 export default nextConfig;

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { PortableText, PortableTextBlock } from "next-sanity";
 import { useRef } from "react";
-import { inView, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 type DescriptiveCtaClientProps = {
@@ -34,13 +34,11 @@ const DescriptiveCtaClient = ({
       {image && image.url && (
         <Image
           src={image.url}
-          fill={true}
-          objectFit="cover"
-          quality={100}
+          fill
           className={cn(
-            "absolute -z-10 transition-all duration-500 ease-in-out grayscale opacity-40",
+            "absolute -z-10 object-cover transition-all duration-500 ease-in-out grayscale opacity-40",
           )}
-          alt={image.alt}
+          alt={image.alt ?? ""}
           priority
         />
       )}

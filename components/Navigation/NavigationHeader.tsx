@@ -25,7 +25,7 @@ const NavigationHeader = ({ data }: { data: NavigationProps }) => {
           />
         </>
       )}
-      {data.links && data.links.length && <NavBar data={data.links} />}
+      {data.links && data.links.length > 0 && <NavBar data={data.links} />}
     </div>
   );
 };
